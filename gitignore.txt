@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.venv/
+venv/
+
+# Temp/runtime
+/tmp/
+*.tmp
+logs/
+*.log
+
+# Node leftovers
+node_modules/
+dist/
+.wrangler/
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+
+# Environment
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Build artifacts
+*.zip
+*.tar.gz
+
+# Hugging Face cache
+.cache/
