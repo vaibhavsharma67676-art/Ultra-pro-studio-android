@@ -1,6 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
-
+// Ensure Capacitor has a local web directory for Android sync.
+fs.mkdirSync('www', { recursive: true });
+if (!fs.existsSync('www/index.html')) {
+  fs.writeFileSync(
+    'www/index.html',
+    '<!doctype html><html><head><meta charset="utf-8"><title>Ultra Pro Studio</title></head><body>Loading Ultra Pro Studio...</body></html>'
+  );
+}
 const candidates = [
   'android/app/src/main/java/in/vaibhav/ultraprostudio/MainActivity.kt',
   'android/app/src/main/java/in/vaibhav/ultraprostudio/MainActivity.java',
